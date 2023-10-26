@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "jsoneditor/dist/jsoneditor.css";
-import JSONEditor from "jsoneditor";
+import type JSONEditor from "jsoneditor";
 import type { JSONEditorOptions } from "jsoneditor";
 import { api } from "~@/utils/api";
 
