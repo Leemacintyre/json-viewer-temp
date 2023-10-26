@@ -46,7 +46,7 @@ const JSONEditorComponent = () => {
   }
 
   return (
-    <div style={{ width: '100%', height: '95vh', overflow: 'hidden' }}>
+    <div style={{ width: '100%', height: '95vh', }}>
       <button
         type="button"
         className={"bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center m-1"}
