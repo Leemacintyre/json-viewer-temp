@@ -1,11 +1,11 @@
 import Head from "next/head";
 
-import { api } from "~@/utils/api";
+
 import JSONEditorComponent from "~@/editor";
 
 
 export default function Home() {
-  const hello = api.post.hello.useQuery({ text: "from tRPC" });
+
 
   return (
     <div style={{ height: "100vh" }}>
