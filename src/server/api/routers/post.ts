@@ -20,7 +20,7 @@ export const postRouter = createTRPCRouter({
 
   create: publicProcedure
     .input(z.object({ name: z.string().min(1) }))
-    .mutation(async ({ input }) => {
+    .mutation(({ input }) => {
       // simulate a slow db call
 
       const unmarshalledItem = AWS.DynamoDB.Converter.unmarshall(JSON.parse(input.name) as AttributeMap);
