@@ -42,6 +42,13 @@ const JSONEditorComponent = () => {
   async function handleClick() {
     if (!jsonEditor) return;
     const res = await mutateAsync({ name: jsonEditor.getText() });
+    if (!res) return;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    for (const [_key, value] of Object.entries(res)) {
+      if (value === undefined) {
+        return;
+      }
+    }
     jsonEditor.setText(JSON.stringify(res));
   }
 

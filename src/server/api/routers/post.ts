@@ -1,5 +1,5 @@
 import { z } from "zod";
-import AWS from "aws-sdk";
+import { DynamoDB } from "aws-sdk";
 
 import { createTRPCRouter, publicProcedure } from "~@/server/api/trpc";
 import { type AttributeMap } from "aws-sdk/clients/dynamodb";
@@ -23,7 +23,7 @@ export const postRouter = createTRPCRouter({
     .mutation(({ input }) => {
       // simulate a slow db call
 
-      const unmarshalledItem = AWS.DynamoDB.Converter.unmarshall(JSON.parse(input.name) as AttributeMap);
+      const unmarshalledItem = DynamoDB.Converter.unmarshall(JSON.parse(input.name) as AttributeMap);
 
       //
       // await new Promise((resolve) => setTimeout(resolve, 1000));
