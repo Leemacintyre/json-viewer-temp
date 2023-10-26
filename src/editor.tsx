@@ -49,10 +49,10 @@ const JSONEditorComponent = () => {
     <div style={{ width: '100%', height: '95vh', overflow: 'hidden' }}>
       <button
         type="button"
+        className={"bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center m-1"}
         onClick={handleClick}
-
       >
-        unmarshal
+        Unmarshal
       </button>
       <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
     </div>
